@@ -3,10 +3,16 @@
     "tasks": [
         {
             "label": "elm make 2",
-            "group": {"kind":"build", "isDefault": true},
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "command": "elm",
-            "args": ["make", "./src/Main.elm", "--output=./elm.js"]
-            
+            "args": [
+                "make",
+                "./src/Main.elm",
+                "--output=./elm.js"
+            ]
         }
     ]
 }
