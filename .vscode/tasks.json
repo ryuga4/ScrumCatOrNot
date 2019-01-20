@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "elm make 2",
+            "group": {"kind":"build", "isDefault": true},
+            "command": "elm",
+            "args": ["make", "./src/Main.elm", "--output=./elm.js"]
+            
+        }
+    ]
+}
