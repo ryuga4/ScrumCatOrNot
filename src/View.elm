@@ -4,8 +4,8 @@ import Bootstrap.CDN as CDN
 import Bootstrap.Grid as Grid
 import Bootstrap.Grid.Col as Col
 import Html exposing (..)
-import Html.Attributes exposing (class, style)
-import Html.Events exposing (onClick)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Model exposing (..)
 
 
@@ -14,6 +14,7 @@ view model =
     div []
         [ bootstrap model
         , something model
+        , user model
         ]
 
 
@@ -43,4 +44,14 @@ something model =
         , h1 [] [ text "h1" ]
         , h2 [] [ text "h2" ]
         , h3 [] <| List.map text [ "h3", "h3", "h3", "h3", "h3" ]
+        ]
+
+
+user model =
+    div []
+        [ h1 [] [ text <| "Name: " ++ model.userName ]
+        , input [ placeholder "New name", value model.userNameInput, onInput Change ]
+            []
+        , button [ class "btn btn-primary", onClick Accept ]
+            [ text "Accept" ]
         ]

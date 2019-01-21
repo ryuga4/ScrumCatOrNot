@@ -21,3 +21,17 @@ update msg model =
                     { model | number = model.number - 1 }
             in
             ( newModel, Cmd.none )
+
+        Change newName ->
+            let
+                newModel =
+                    { model | userNameInput = newName }
+            in
+            ( newModel, Cmd.none )
+
+        Accept ->
+            let
+                newModel =
+                    { model | userName = model.userNameInput }
+            in
+            ( newModel, Cmd.none )
