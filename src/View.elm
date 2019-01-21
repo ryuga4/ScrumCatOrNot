@@ -31,8 +31,7 @@ bootstrap model =
             ]
         , Grid.row []
             [ Grid.col []
-                [ h1 [] [ text (String.fromInt model) ]
-                , text "X"
+                [ h1 [] [ text (String.fromInt model.number) ]
                 ]
             ]
         ]

@@ -1,13 +1,17 @@
-module Model exposing (..)
-
-type alias Model = Int
+module Model exposing (Model, Msg(..), init)
 
 
-init : () -> (Model, Cmd Msg)
+type alias Model =
+    { number : Int }
+
+
+init : () -> ( Model, Cmd Msg )
 init _ =
-  ( 1
-  , Cmd.none
-  )
+    ( { number = 1 }
+    , Cmd.none
+    )
 
-type Msg = Increment | Decrement
- 
+
+type Msg
+    = Increment
+    | Decrement
