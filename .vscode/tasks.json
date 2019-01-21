@@ -2,17 +2,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "elm make 2",
+            "label": "build",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "elm",
+            "command": "elm.exe",
             "args": [
                 "make",
-                "./src/Main.elm",
-                "--output=./elm.js"
+                "src/Main.elm",
+                "--output=elm.js"
             ]
-        }
+        },
     ]
 }

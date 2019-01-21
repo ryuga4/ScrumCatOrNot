@@ -11,6 +11,13 @@ import Model exposing (..)
 
 view : Model -> Html Msg
 view model =
+    div []
+        [ bootstrap model
+        , something model
+        ]
+
+
+bootstrap model =
     Grid.container
         []
         [ CDN.stylesheet -- creates an inline style node with the Bootstrap CSS
@@ -25,7 +32,16 @@ view model =
         , Grid.row []
             [ Grid.col []
                 [ h1 [] [ text (String.fromInt model) ]
-                , text "XDDasdasd asdaasd"
+                , text "X"
                 ]
             ]
+        ]
+
+
+something model =
+    div []
+        [ text "text"
+        , h1 [] [ text "h1" ]
+        , h2 [] [ text "h2" ]
+        , h3 [] <| List.map text [ "h3", "h3", "h3", "h3", "h3" ]
         ]

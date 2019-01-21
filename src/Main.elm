@@ -9,3 +9,7 @@ import View exposing (view)
 
 main =
     Browser.element { init = init, update = update, view = view, subscriptions = subscriptions }
+
+
+a =
+    1
