@@ -15,6 +15,7 @@ view model =
         [ bootstrap model
         , something model
         , user model
+        , liveUser model
         ]
 
 
@@ -50,6 +51,16 @@ something model =
 user model =
     div []
         [ h1 [] [ text <| "Name: " ++ model.userName ]
+        , input [ placeholder "New name", value model.userNameInput, onInput Change ]
+            []
+        , button [ class "btn btn-primary", onClick Accept ]
+            [ text "Accept" ]
+        ]
+
+
+liveUser model =
+    div []
+        [ h1 [] [ text <| "Live name: " ++ model.userNameInput ]
         , input [ placeholder "New name", value model.userNameInput, onInput Change ]
             []
         , button [ class "btn btn-primary", onClick Accept ]
