@@ -1,4 +1,8 @@
 {
-"elm.compiler": ".\\node_modules\\.bin\\elm",
-"elm.makeCommand": ".\\node_modules\\.bin\\elm-make"
+    "elm.compiler": ".\\node_modules\\.bin\\elm",
+    "elm.makeCommand": ".\\node_modules\\.bin\\elm-make",
+    "[elm]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveTimeout": 1500
+    }
 }
