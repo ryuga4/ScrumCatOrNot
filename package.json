@@ -1,5 +1,8 @@
 {
     "scripts": {
         "watch": "chokidar \"**/*.elm\" -c \"elm.exe make src/Main.elm --output=elm.js\" --initial"
+    },
+    "devDependencies": {
+        "chokidar-cli": "^1.2.1"
     }
 }

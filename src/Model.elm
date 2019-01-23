@@ -5,6 +5,7 @@ type alias Model =
     { number : Int
     , userNameInput : String
     , userName : String
+    , txt : String
     }
 
 
@@ -13,13 +14,16 @@ init _ =
     ( { number = 1
       , userNameInput = ""
       , userName = "Example User"
+      , txt = ""
       }
     , Cmd.none
     )
 
 
 type Msg
-    = Increment
+    = CatFound
+    | CatNotFound
+    | Increment
     | Decrement
     | Change String
     | Accept

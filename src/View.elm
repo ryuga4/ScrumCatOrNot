@@ -25,15 +25,17 @@ bootstrap model =
         [ CDN.stylesheet -- creates an inline style node with the Bootstrap CSS
         , Grid.row []
             [ Grid.col []
-                [ button [ class "btn btn-primary btn-lg", onClick Increment ] [ text "+" ]
+                [ button [ class "btn btn-primary btn-lg", onClick CatFound ] [ text "Meow" ]
+
                 ]
+
             , Grid.col []
-                [ button [ class "btn btn-secondary btn-lg", onClick Decrement ] [ text "-" ]
+                [ button [ class "btn btn-secondary btn-lg", onClick CatNotFound ] [ text "Not Cat" ]
                 ]
             ]
         , Grid.row []
             [ Grid.col []
-                [ h1 [] [ text (String.fromInt model.number) ]
+                [ h1 [] [ text (model.txt) ]
                 ]
             ]
         ]
@@ -42,9 +44,9 @@ bootstrap model =
 something model =
     div []
         [ text "text"
-        , h1 [] [ text "h1" ]
-        , h2 [] [ text "h2" ]
-        , h3 [] <| List.map text [ "h3", "h3", "h3", "h3", "h3" ]
+        , h1 [] [ text "aaa" ]
+        , h2 [] [ text "sss" ]
+        , h3 [] <| List.map text [ "fsa", "gfd", "h3", "h3", "h3" ]
         ]
 
 
